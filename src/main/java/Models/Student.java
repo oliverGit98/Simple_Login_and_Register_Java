@@ -64,6 +64,7 @@ public class Student {
         this.parentMobile = parentMobile;
     }
 
+    //Setters and Getters
     public int getRegNo() {
         return regNo;
     }
@@ -166,8 +167,11 @@ public class Student {
         return new java.sql.Date(date.getTime());
     }
     
+    //Method to insert student data to database
     public void insertStudent(Student student){
-        String query = "INSERT INTO `registration`(`firstName`, `lastName`, `dateOfBirth`, `gender`, `address`, `email`, `mobilePhone`, `homePhone`, `parentName`, `nic`, `contactNo`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        String query = "INSERT INTO `registration`(`firstName`, `lastName`, `dateOfBirth`, `gender`, "
+                + "`address`, `email`, `mobilePhone`, `homePhone`, `parentName`, `nic`, `contactNo`) "
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         
         try {
             con = DATABASE.getConnection();
@@ -201,7 +205,7 @@ public class Student {
     }
     
     
-    
+    //method to get student from database
     public Student getStudent(int id){
         String query = "SELECT * FROM `registration` WHERE `regNo` = ?";
         
@@ -232,8 +236,11 @@ public class Student {
     }
     
     
+    //method to update user
     public void updateStudent(Student student){
-        String query = "UPDATE `registration` SET `firstName`=?,`lastName`=?,`dateOfBirth`=?,`gender`=?,`address`=?,`email`=?,`mobilePhone`=?,`homePhone`=?,`parentName`=?,`nic`=?,`contactNo`=? WHERE `regNo` = ?";
+        String query = "UPDATE `registration` SET `firstName`=?,`lastName`=?,`dateOfBirth`=?,`gender`=?,`"
+                + "address`=?,`email`=?,`mobilePhone`=?,`homePhone`=?,`parentName`=?,`nic`=?,`contactNo`=? "
+                + "WHERE `regNo` = ?";
         
         try {
             con = DATABASE.getConnection();
@@ -266,7 +273,7 @@ public class Student {
         }
     }
     
-    
+    //method to delete student
     public void deleteStudent(int regNo){
         String query = "DELETE FROM `registration` WHERE `regNo`=?";
         
