@@ -183,7 +183,7 @@ public class RegisterForm extends javax.swing.JFrame {
 
         jComboBox1.setBackground(new java.awt.Color(41, 50, 65));
         jComboBox1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(52, 58, 64));
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
