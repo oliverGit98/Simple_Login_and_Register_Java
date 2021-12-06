@@ -83,6 +83,7 @@ public class RegisterForm extends javax.swing.JFrame {
         } 
     }
     
+    //method for clear the fields
     public void clearFields(){
         txt_fname.setText("");
         txt_lname.setText("");
